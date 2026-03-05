@@ -1,0 +1,60 @@
+[
+    {
+        "type": "function",
+        "function": {
+            "name": "convert",
+            "description": "Converts a USD amount to EUR using current exchange rates.",
+            "strict": true,
+            "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "usd_amount": {
+                        "type": "integer",
+                        "description": "The amount in USD to convert to EUR."
+                    }
+                },
+                "required": ["usd_amount"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "calculate_total",
+            "description": "Calculates the sum of a list of integers.",
+            "strict": true,
+            "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "numbers": {
+                        "type": "array",
+                        "items": {"type": "integer"},
+                        "description": "A list of integers to sum together."
+                    }
+                },
+                "required": ["numbers"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "valid_vat",
+            "description": "Validates a VAT number.",
+            "strict": true,
+            "parameters": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "VAT_number": {
+                        "type": "string",
+                        "description": "The VAT number to validate."
+                    }
+                },
+                "required": ["VAT_number"]
+            }
+        }
+    }
+]
